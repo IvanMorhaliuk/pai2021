@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+canvas {
+    background: #232323;
+    
+}
+.container{
+    width: 1160px;
+}
+.login{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: repeat(12,1fr);
+
+    height: 100vh;
+    
+
+   
+}
+.login-logo{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: left;
+    grid-column: 1/7;
+    width: fit-content;
+
+    color: #fff;
+    font-size: 96px;
+
+    margin: 0 auto;
+}
+.login-form{
+    background-color: #fff;
+    text-transform: uppercase;
+    grid-column: 7/13;
+}
+form{
+    color: #949494;
+    padding-top: 35px;
+
+    font-family: sans-serif;
+}
+fieldset{
+    padding: 0px 40px;
+}
+
+legend{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+.form-input-wrapper{
+    border: 3px solid #949494;
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    position: relative;
+
+    margin-bottom: 30px;
+}
+.form-input-wrapper:last-of-type{
+    margin-bottom: 40px;
+}
+.form-input-wrapper::before,.form-input-wrapper::after{
+    content: "";
+    height: 10px;
+    width: 10px;
+
+    position: absolute;
+    bottom: -7px;
+    left: -1px;
+    transform: rotate(45deg);
+    z-index: 1;
+
+    background-color: #949494;
+}
+.form-input-wrapper::after{
+    left: 98%;
+}
+input{
+    position: relative;
+
+    display: block;
+    width: 100%;
+
+    border: none;
+    
+    padding: 3px 5px;
+    
+}
+input:focus{
+    outline: none;
+}
+input::placeholder{
+    text-transform: uppercase;
+
+}
+.form-link{
+    display: block;
+    text-align: center;
+    color: #949494;
+    font-size: 18px;
+    margin-bottom: 36px;
+}
+.login-form-controls{
+    display: grid;
+    padding: 0px;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+}
+.login-form-controls>*{
+    font-size: 24px;
+    padding: 4px 15px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.login-form-controls a{
+    grid-column: 1/2;
+    background: #A47454;
+
+}
+.login-form-controls button{
+    grid-column: 2/3;
+    background: #4D4D4D;
+    border: 0;
+}
