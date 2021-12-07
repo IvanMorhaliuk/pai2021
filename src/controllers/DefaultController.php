@@ -2,10 +2,12 @@
 require_once 'AppController.php';
 class DefaultController extends AppController{
     public function index(){
-        $this->render('login');
+        $this->render('page-login-and-registration','login');
     }
-    public function projects(){
-        // TODO display project.html
-        die("projects method");
+    public function register(){
+        $this->render('page-login-and-registration','register');
+    }
+    public function profile(){
+        $this->render('page-profile','profile');
     }
 }

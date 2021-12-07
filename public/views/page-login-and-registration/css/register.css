@@ -1,28 +1,4 @@
-*{
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
-fieldset{
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-body{
-    height: 100vh;
-    width: 100vw;
-    margin: 0;
-    padding: 0;
-}
-canvas {
-    background: #232323;
-}
-.container{
-    width: 1160px;
-}
-.login-page{
+.register-page{
     position: absolute;
     top: 0;
     left: 50%;
@@ -34,22 +10,13 @@ canvas {
     align-items: center;
     height: 100vh;
 }
-.logo{
-    display: grid;
-    grid-auto-flow: column;
-    align-items: center;
-    justify-content: left;
 
-    color: #fff;
-    font-size: 96px;
-}
-.login-page__logo{
-    grid-column: 1/7;
-    margin: 0 auto;
-}
-.login-page__form{
+.register-page__form{
     grid-column: 7/13;
     padding-top: 35px;
+    height: 100%;
+    display: grid;
+    align-items: center;
 
     text-transform: uppercase;
     font-family: sans-serif;
@@ -59,7 +26,8 @@ canvas {
 }
 
 fieldset{
-    padding: 0px 40px;
+    padding: 0px 70px;
+    text-align: center;
 }
 
 legend{
@@ -93,14 +61,14 @@ legend{
     background-color: #949494;
 }
 .form__input-wrapper::after{
-    left: 98%;
+    left: 100%;
 }
 input{
     position: relative;
 
     display: block;
     width: 100%;
-    padding: 3px 5px;
+    padding: 3px 15px;
 
     border: none;
 }
@@ -120,26 +88,19 @@ input::placeholder{
 }
 .form__controls{
     display: grid;
-    padding: 0px;
     grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
 }
 .form__button{
     padding: 4px 15px;
 
+
     font-size: 24px;
     color: #ffffff;
     text-transform: uppercase;
-}
 
+    border: 0;
+}
 .form__button-o{
-    grid-column: 1/2;
 
     background: #A47454;
-}
-.form__button:last-child{
-    grid-column: 2/3;
-
-    background: #4D4D4D;
-    border: 0;
 }

@@ -15,6 +15,7 @@ class Routing{
         $controller = self::$routers[$action];
         $object = new $controller;
         $object->$action();
+
     }
 
 }

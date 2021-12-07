@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/login.css">
+    <link rel="stylesheet" href="/public/views/shared/css/normalize.css">
+    <link rel="stylesheet" href="/public/views/shared/css/main.css">
+    <link rel="stylesheet" href="/public/views/page-login-and-registration/css/main.css">
+    <link rel="stylesheet" href="/public/views/page-login-and-registration/css/login.css">
     <title>login</title>
 </head>
 <body>
@@ -12,14 +15,7 @@
     
     <div class="container login-page">
 
-
-        <div class="logo login-page__logo">
-            <div class="logo-title">DailyRepo</div>
-            <!-- /.logo-title -->
-            <img class="logo-img" src="/public/img/emojione_open-book.svg" alt="open book picture">
-        </div>
-        <!-- /.login-logo -->
-
+        <?php include_once __DIR__ . "/../../shared/components/logo/html/logo.html" ?>
 
         <div class="form login-page__form">
             <form action="#" method="post">
@@ -36,15 +32,15 @@
                 </fieldset>
                 <a href="#" class="form__link">forgot your password?</a>
                 <fieldset class="form__controls">
-                    <a class="form__button form__button-o" href="#">Register</a>
+                    <a class="form__button form__button-o" href="<?= "register" ?>">Register</a>
                     <button class="form__button" type="submit">Sign in</button>
                 </fieldset>
             </form>
         </div>
-        <!-- /.login-form -->
+        <!-- /.login-page__form -->
 
     </div>
     <!-- /.container -->
-    <script src="/public/scripts/bganim.js"></script>
+    <script src="/public/views/page-login-and-registration/scripts/bganim.js"></script>
 </body>
 </html>

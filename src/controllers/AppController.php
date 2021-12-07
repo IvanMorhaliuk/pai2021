@@ -1,8 +1,8 @@
 <?php
 
 class AppController{
-    protected function render(string $template = null){
-        $templatePath = 'public/views/' . $template . '.html';
+    protected function render(string $page , string $template = null){
+        $templatePath = 'public/views/' . $page . '/html/' . $template . '.php';
         $output = 'File not found';
         
         if (file_exists($templatePath)){

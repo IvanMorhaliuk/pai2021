@@ -1,0 +1,14 @@
+canvas {
+    background: #232323;
+}
+.logo{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: left;
+    grid-column: 1/7;
+    margin: 0 auto;
+
+    color: #fff;
+    font-size: 96px;
+}
