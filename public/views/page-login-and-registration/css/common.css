@@ -1,0 +1,9 @@
+canvas {
+    background: var(--mainBackgroundColor);
+}
+.logo{
+    grid-column: 1/7;
+    margin: 0 auto;
+
+    font-size: 96px;
+}

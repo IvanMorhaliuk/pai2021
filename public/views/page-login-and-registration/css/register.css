@@ -95,7 +95,7 @@ input::placeholder{
 
 
     font-size: 24px;
-    color: #ffffff;
+    color: var(--mainTextColor);
     text-transform: uppercase;
 
     border: 0;

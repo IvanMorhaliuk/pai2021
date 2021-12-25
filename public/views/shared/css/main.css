@@ -1,18 +1,39 @@
+:root{
+    --mainBackgroundColor: #232323;
+    --mainTextColor: #ffffff;
+}
+
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 a{
     text-decoration: none;
     color: black;
+}
+img{
+    display: block;
+    max-width: 100%;
 }
 fieldset{
     border: none;
     margin: 0;
     padding: 0;
 }
+input:focus{
+    outline: none;
+}
+button{
+    border: none;
+    outline: none;
+}
+figure,figcaption{
+    display: block;
+}
 body{
     height: 100vh;
-    width: 80vw;
+    width: 100vw;
     margin: 0;
     padding: 0;
 }

@@ -1,8 +1,9 @@
 .arrow {
-    border: solid black;
-    border-width: 0 3px 3px 0;
+    border: solid var(--mainTextColor);
+    border-width: 0 2px 2px 0;
     display: inline-block;
-    padding: 3px;
+    padding: 6px;
+
 }
 
 .right {
@@ -21,6 +22,96 @@
 }
 
 .down {
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg) translateY(-40%);
+    -webkit-transform: rotate(45deg) translateY(-40%);
+}
+.header{
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: repeat(12,1fr);
+
+    color: var(--mainTextColor);
+}
+.logo{
+    position: absolute;
+    left: 15px;
+
+    font-size: 30px;
+    line-height: 36px;
+}
+.search{
+    grid-column: 6/10;
+    padding: 3px 15px;
+
+    background-image: url("/public/img/icons/fe_search.svg");
+    background-repeat: no-repeat;
+    background-position: 15px 3px;
+}
+.search::placeholder{
+    padding-left: 40px;
+
+    
+    line-height: 24px;
+    color: #A6A6A6;
+}
+.search:focus{
+    background-image: none;
+}
+.search:focus::placeholder{
+    color: transparent;
+}
+.notifications{
+    grid-column: 10/11;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.person{
+    grid-column: 11/13;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+}
+.menu{
+    position: relative;
+
+}
+.menu:hover{
+    cursor: pointer;
+}
+.menu__dropdown{
+    position: absolute;
+    width: 10vw;
+
+    display: none;
+    padding: 30px 0px 10px 0px;
+
+    background-color: var(--mainBackgroundColor);
+}
+
+.dropdown__elem{
+    padding: 8px 30px;
+    color: var(--mainTextColor);
+}
+.dropdown__elem:hover{
+    background-color: #fff;
+    color: black;
+}
+.dropdown__close{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+
+    background-color: var(--mainBackgroundColor);
+    background-image: url("/public/img/icons/cross.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.dropdown__close:hover{
+    background-color: red;
 }

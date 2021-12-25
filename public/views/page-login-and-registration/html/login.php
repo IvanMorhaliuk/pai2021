@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/views/shared/css/reset.css">
     <link rel="stylesheet" href="/public/views/shared/css/normalize.css">
     <link rel="stylesheet" href="/public/views/shared/css/main.css">
-    <link rel="stylesheet" href="/public/views/page-login-and-registration/css/main.css">
+    <link rel="stylesheet" href="/public/views/shared/components/logo/css/logo.css">
+    <link rel="stylesheet" href="/public/views/page-login-and-registration/css/common.css">
     <link rel="stylesheet" href="/public/views/page-login-and-registration/css/login.css">
     <title>login</title>
 </head>

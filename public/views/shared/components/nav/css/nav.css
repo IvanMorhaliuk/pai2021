@@ -1,0 +1,33 @@
+.nav{
+    display: grid;
+    height: 100%;
+    align-content: center;
+    grid-gap: 25px;
+
+}
+.nav__elem{
+    display: grid;
+    width: 70px;
+    padding: 4px;
+    place-items: center;
+
+}
+.nav__elem:hover{
+
+
+    background-color: rgba(164, 116, 84, 0.5);
+;
+}
+.elem__img{
+    margin: 0 auto;
+}
+.elem__caption{
+    color: var(--mainTextColor);
+}
+.settings{
+    position: absolute;
+    bottom: 27px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
