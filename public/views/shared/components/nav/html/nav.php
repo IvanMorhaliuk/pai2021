@@ -1,5 +1,5 @@
 <div class="nav">
-    <a href="#" class="nav__elem elem profile">
+    <a href="#" class="nav__elem nav__elem_active elem profile">
         <img class="elem__img" src="/public/img/icons/icon-profile.svg" alt="icon-profile">
         <p class="elem__caption">Profile</p>
     </a>

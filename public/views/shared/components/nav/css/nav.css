@@ -12,11 +12,10 @@
     place-items: center;
 
 }
-.nav__elem:hover{
 
-
+.nav__elem:hover,.nav__elem_active{
     background-color: rgba(164, 116, 84, 0.5);
-;
+
 }
 .elem__img{
     margin: 0 auto;

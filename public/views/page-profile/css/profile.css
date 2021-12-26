@@ -1,3 +1,4 @@
+@import url("/public/views/shared/css/reset.css");
 @import url("/public/views/shared/css/normalize.css");
 @import url("/public/views/shared/css/main.css");
 @import url("/public/views/shared/components/logo/css/logo.css");
@@ -22,4 +23,126 @@ nav{
     background-color: var(--mainBackgroundColor);
 
 
+}
+h1{
+    font-size: 48px;
+    line-height: 24px;
+    margin: 0;
+}
+h2{
+    margin-bottom: 20px;
+
+    font-size: 36px;
+    line-height: 24px;
+}
+section{
+    padding: 30px 0px;
+    border-top: 2px solid black;
+}
+
+.account-container{
+    position: relative;
+}
+.account__profile{
+    position: absolute;
+    right: 0px;
+
+    padding: 33px 10px;
+
+    font-size: 14px;
+    line-height: 17px;
+
+    background: #D2D2D2;
+
+}
+.personal-info{
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: 30px;
+    margin-bottom: 85px;
+}
+.avatar img{
+    margin: 0 auto 30px;
+}
+.nickname{
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 50px;
+}
+
+.value{
+    text-align: right;
+}
+.links{
+    text-align: center;
+    text-decoration: underline;
+
+}
+.links a:first-child{
+    margin-right: 26px;
+}
+
+.general-desc{
+    width: 70%;
+    padding: 14px 10px;
+
+    font-size: 14px;
+    line-height: 24px;
+
+    background-color: #D2D2D2;
+}
+
+.books{
+    width: 70%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 30px;
+
+}
+.books__item{
+    display: grid;
+    grid-auto-flow: row;
+    justify-content: start;
+    padding: 16px;
+}
+.item-caption{
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+}
+.item-info{
+    display: grid;
+    align-content: space-between;
+}
+.item-desc,.item-date{
+    display: none;
+
+}
+.diaries__header{
+    width: 70%;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.diaries__view{
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    place-content: center;
+    grid-gap: 33px;
+
+    transform: translateY(25%);
+}
+button{
+
+    width: 35px;
+    height: 35px;
+
+    background-color: #fff;
+}
+button:hover{
+    cursor: pointer;
 }
