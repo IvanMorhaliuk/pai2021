@@ -1,4 +1,4 @@
-window.onload = function (){
+(function(){
     let btnListView = document.getElementById("list-view");
     let btnGridView = document.getElementById("grid-view");
     let books = document.getElementById("books");
@@ -29,4 +29,4 @@ window.onload = function (){
             item.children[1].children[2].style.display = "none";
         }
     });
-};
+})();

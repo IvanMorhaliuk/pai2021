@@ -20,11 +20,11 @@
         <?php include_once __DIR__ . "/../../shared/components/logo/html/logo.html" ?>
 
         <div class="form login-page__form">
-            <form action="#" method="post">
+            <form action="login" method="post">
                 <fieldset class="form__inputs">
                     <legend>Login</legend>
                     <div class="form__input-wrapper">
-                        <input type="email" name="login" id="login" placeholder="email">
+                        <input type="email" name="email" id="login" placeholder="email">
                     </div>
                     <!-- /.form-input-wrapper -->
                     <div class="form__input-wrapper">
@@ -37,6 +37,15 @@
                     <a class="form__button form__button-o" href="<?= "register" ?>">Register</a>
                     <button class="form__button" type="submit">Sign in</button>
                 </fieldset>
+                <div class="messages_tmp">
+                    <?php if(isset($messages)){
+                        foreach ($messages as $message){
+                            echo $message;
+                        }
+                    }
+                    ?>
+                </div>
+                <!-- /.messages_tmp -->
             </form>
         </div>
         <!-- /.login-page__form -->

@@ -5,7 +5,7 @@
     <div class="person">
         <img class="person__avatar" src="/public/img/header/avatars/avatar-placeholder.png" alt="avatar">
         <!-- /.avatar -->
-        <div class="person__name">PERSON-NAME</div>
+        <div class="person__name"><?= $user->getName() . ' ' . $user->getSurname(); ?></div>
         <!-- /.name -->
         <div class="menu">
             <div class="arrow down" id="menu_show"></div>

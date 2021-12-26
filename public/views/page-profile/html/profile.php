@@ -1,3 +1,4 @@
+<?php if(!isset($user)) {echo "You have no rights!";die();} ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,15 +25,15 @@
             <div class="account__profile">
                 <div class="avatar"><img src="/public/img/avatar.png" alt="avatar"></div>
                 <!-- /.avatar -->
-                <div class="nickname">john_artdaily</div>
+                <div class="nickname"><?= $user->getNickname() ?></div>
                 <div class="personal-info">
                     <div class="key">Name</div>
                     <!-- /.key -->
-                    <div class="value">John</div>
+                    <div class="value"><?= $user->getName() ?></div>
                     <!-- /.value -->
                     <div class="key">Surname</div>
                     <!-- /.key -->
-                    <div class="value">Simple</div>
+                    <div class="value"><?= $user->getSurname() ?></div>
                     <!-- /.value -->
                     <div class="key">Date Of birth</div>
                     <!-- /.key -->
@@ -151,7 +152,7 @@
         <!-- /.container -->
     </section>
 
-    <script src="/public/views/shared/components/header/scripts/menu.js"></script>
-    <script src="/public/views/page-profile/scripts/toggle-view.js"></script>
+
+    <script type="module" src="/public/views/page-profile/scripts/profile.js"></script>
 </body>
 </html>
