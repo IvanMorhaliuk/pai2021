@@ -1,0 +1,59 @@
+.books{
+    width: 70%;
+    display: grid;
+    /*grid-auto-flow: column;*/
+    /*justify-content: start;*/
+    grid-template-columns: repeat(4,25%);
+
+}
+.books__item{
+    display: grid;
+    padding: 16px;
+}
+.books__item:hover{
+    background-color: rgb(210, 210, 210);
+    cursor: pointer;
+}
+img[alt="book cover"]{
+    margin: 0 auto;
+}
+.item-caption{
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+}
+.item-info{
+    display: grid;
+    align-content: space-between;
+}
+.item-desc,.item-date{
+    display: none;
+
+}
+.books__header{
+    width: 70%;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.books__view{
+    display: grid;
+    grid-auto-flow: column;
+    place-items: center;
+    place-content: center;
+    grid-gap: 33px;
+
+    transform: translateY(25%);
+}
+
+.list-view,.grid-view{
+
+    width: 35px;
+    height: 35px;
+
+    background-color: #fff;
+}
+.list-view:hover,.grid-view:hover{
+    cursor: pointer;
+}

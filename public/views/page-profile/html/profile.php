@@ -83,63 +83,7 @@
 
     <section class="diaries">
         <div class="container">
-            <div class="diaries__header">
-                <h2>My diaries</h2>
-                <div class="diaries__view">
-                    <button id="list-view">
-                        <img src="/public/img/icons/icon-list-view_inactive.svg" alt="list view button" id="list-view-img">
-                    </button>
-                    <button id="grid-view">
-                        <img src="/public/img/icons/icon-grid-view.svg" alt="grid view button" id="grid-view-img">
-                    </button>
-                </div>
-                <!-- /.diaries__view -->
-            </div>
-            <!-- /.diaries__header -->
-
-            <div class="books" id="books">
-                <div class="books__item">
-                    <img src="/public/img/bookitem.png" alt="book cover">
-                    <div class="item-info">
-                        <p class="item-caption">Title 1</p>
-                        <p class="item-desc">smth</p>
-                        <p class="item-date">10/12/2005</p>
-                    </div>
-                    <!-- /.item-info -->
-                </div>
-                <!-- /.books__item -->
-                <div class="books__item">
-                    <img src="/public/img/bookitem.png" alt="book cover">
-                    <div class="item-info">
-                        <p class="item-caption">Title 1</p>
-                        <p class="item-desc">smth</p>
-                        <p class="item-date">10/12/2005</p>
-                    </div>
-                    <!-- /.item-info -->
-                </div>
-                <!-- /.books__item -->
-                <div class="books__item">
-                    <img src="/public/img/bookitem.png" alt="book cover">
-                    <div class="item-info">
-                        <p class="item-caption">Title 1</p>
-                        <p class="item-desc">smth</p>
-                        <p class="item-date">10/12/2005</p>
-                    </div>
-                    <!-- /.item-info -->
-                </div>
-                <!-- /.books__item -->
-                <div class="books__item">
-                    <img src="/public/img/bookitem.png" alt="book cover">
-                    <div class="item-info">
-                        <p class="item-caption">Title 1</p>
-                        <p class="item-desc">smth</p>
-                        <p class="item-date">10/12/2005</p>
-                    </div>
-                    <!-- /.item-info -->
-                </div>
-                <!-- /.books__item -->
-            </div>
-            <!-- /.books-grid -->
+            <?php include __DIR__ . "/../../shared/components/diariesList/html/diariesList.php" ?>
         </div>
         <!-- /.container -->
     </section>
@@ -151,6 +95,7 @@
         </div>
         <!-- /.container -->
     </section>
+
 
 
     <script type="module" src="/public/views/page-profile/scripts/profile.js"></script>

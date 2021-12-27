@@ -1,8 +1,8 @@
 .logo{
+    grid-area: logo;
     display: grid;
     grid-auto-flow: column;
     align-items: center;
-    justify-content: left;
 
     color: var(--mainTextColor);
 }

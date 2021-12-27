@@ -2,99 +2,81 @@
 
 class User
 {
-    private $email;
-    private $password;
-    private $name;
-    private $surname;
-    private $nickname;
-
-    public function __construct(string $email,string $nickname,string $password,string $name,string $surname)
+    private string $email;
+    private string $password;
+    private string $name;
+    private string $surname;
+    private string $nickname;
+    private array $privateBooksList;
+    public function __construct(string $email,string $nickname,string $password,string $name,string $surname,$privateBooksList=[])
     {
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
         $this->nickname = $nickname;
+        $this->privateBooksList = $privateBooksList;
     }
 
-    /**
-     * @return string
-     */
     public function getEmail(): string
     {
         return $this->email;
     }
 
-    /**
-     * @param string $email
-     */
     public function setEmail(string $email)
     {
         $this->email = $email;
     }
 
-    /**
-     * @return string
-     */
     public function getPassword(): string
     {
         return $this->password;
     }
 
-    /**
-     * @param string $password
-     */
     public function setPassword(string $password)
     {
         $this->password = $password;
     }
 
-    /**
-     * @return string
-     */
     public function getName(): string
     {
         return $this->name;
     }
 
-    /**
-     * @param string $name
-     */
     public function setName(string $name)
     {
         $this->name = $name;
     }
 
-    /**
-     * @return string
-     */
     public function getSurname(): string
     {
         return $this->surname;
     }
 
-    /**
-     * @param string $surname
-     */
     public function setSurname(string $surname)
     {
         $this->surname = $surname;
     }
 
-    /**
-     * @return string
-     */
     public function getNickname(): string
     {
         return $this->nickname;
     }
 
-    /**
-     * @param string $nickname
-     */
     public function setNickname(string $nickname)
     {
         $this->nickname = $nickname;
+    }
+
+
+    public function getPrivateBooksList(): array
+    {
+        return $this->privateBooksList;
+    }
+
+    public function setPrivateBooksList(array $privateBooksList): void
+    {
+        $this->privateBooksList = $privateBooksList;
     }
 
 

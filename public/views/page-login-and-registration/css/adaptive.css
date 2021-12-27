@@ -1,0 +1,40 @@
+
+
+@media screen and (max-width: 768px){
+
+    .login-page,.register-page{
+        grid-template:
+                    "logo" 20%
+                    "form" 1fr
+                    /1fr;
+
+
+    }
+    .logo{
+        align-self: end;
+    }
+    .login-page__form,.register-page__form{
+        justify-self: center;
+    }
+    .form__input-wrapper::before,.form__input-wrapper::after{
+        left: -6px;
+    }
+    .form__input-wrapper::after{
+        left:100%;
+    }
+
+    form{
+        background-color: #ffffff;
+        padding-top: 35px;
+    }
+    .register-page__form{
+        justify-self: stretch;
+        background-color: transparent;
+        padding: 10px 15px;
+    }
+    .register-page__form form{
+        padding: 10px 30px;
+
+    }
+
+}

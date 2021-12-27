@@ -5,28 +5,25 @@
     btnListView.addEventListener("click",function (){
         document.getElementById("list-view-img").setAttribute("src","/public/img/icons/icon-list-view.svg");
         document.getElementById("grid-view-img").setAttribute("src","/public/img/icons/icon-grid-view_inactive.svg");
-        books.style.gridAutoFlow = "row";
-        for(let item of document.getElementsByClassName("books__item")){
-            item.style.backgroundColor = "#D2D2D2";
-            item.style.gridAutoFlow = "column";
-            item.children[1].children[0].style.textAlign = "left";
-            item.children[1].children[0].style.fontWeight = "bold";
-            item.children[1].children[1].style.display = "block";
-            item.children[1].children[2].style.display = "block";
-        }
+        books.style.gridTemplateColumns = "repeat(1,100%)";
+        document.querySelectorAll(".books__item")
+            .forEach(item=>item.style.gridTemplateColumns = "20% 80%");
+        document.querySelectorAll(".item-date,.item-desc")
+            .forEach(item=>item.style.display="block");
+        document.querySelectorAll(".item-caption")
+            .forEach(item=>item.style.cssText = "text-align:left;font-weight:bold");
 
     });
     btnGridView.addEventListener("click",function (){
         document.getElementById("list-view-img").setAttribute("src","/public/img/icons/icon-list-view_inactive.svg");
         document.getElementById("grid-view-img").setAttribute("src","/public/img/icons/icon-grid-view.svg");
-        books.style.gridAutoFlow = "column";
-        for(let item of document.getElementsByClassName("books__item")){
-            item.style.backgroundColor = "#ffffff";
-            item.style.gridAutoFlow = "row";
-            item.children[1].children[0].style.textAlign = "center";
-            item.children[1].children[0].style.fontWeight = "normal";
-            item.children[1].children[1].style.display = "none";
-            item.children[1].children[2].style.display = "none";
-        }
+        books.style.gridTemplateColumns = "repeat(4,25%)";
+        document.querySelectorAll(".books__item")
+            .forEach(item=>item.style.gridTemplateColumns = "100%");
+        document.querySelectorAll(".item-date,.item-desc")
+            .forEach(item=>item.style.display="none");
+        document.querySelectorAll(".item-caption")
+            .forEach(item=>item.style.cssText = "text-align:center;font-weight:normal");
+
     });
 })();

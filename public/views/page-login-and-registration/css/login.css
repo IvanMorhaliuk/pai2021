@@ -1,107 +1,55 @@
+@import "common.css";
 .login-page{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    grid-area: content;
+    z-index: 1;
 
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: repeat(12,1fr);
+    grid-template:
+            "logo form" 1fr /
+            1fr 1fr;
     align-items: center;
-    height: 100vh;
+
 }
 
-
 .login-page__form{
-    grid-column: 7/13;
-    padding-top: 35px;
+    grid-area: form;
+
+    max-width: 565px;
 
     text-transform: uppercase;
     font-family: sans-serif;
     color: #949494;
 
-    background-color: #fff;
+    background-color: transparent;
 }
-
+form{
+    background-color: #ffffff;
+    padding-top: 35px;
+}
 fieldset{
-    padding: 0px 40px;
+    padding: 0 40px;
 }
 
-legend{
-    margin-bottom: 20px;
 
-    font-size: 48px;
-}
-.form__input-wrapper{
-    position: relative;
 
-    margin-bottom: 30px;
 
-    border: 3px solid transparent;
-    border-bottom-color: #949494;
-}
-.form__input-wrapper:last-of-type{
-    margin-bottom: 40px;
-}
-.form__input-wrapper::before,.form__input-wrapper::after{
-    content: "";
 
-    position: absolute;
-    bottom: -7px;
-    left: -1px;
-    transform: rotate(45deg);
-    z-index: 1;
 
-    height: 10px;
-    width: 10px;
-
-    background-color: #949494;
-}
-.form__input-wrapper::after{
-    left: 98%;
-}
-input{
-    position: relative;
-
-    display: block;
-    width: 100%;
-    padding: 3px 15px;
-
-    border: none;
-}
-
-input::placeholder{
-    text-transform: uppercase;
-}
-.form__link{
-    display: block;
-    margin-bottom: 36px;
-
-    text-align: center;
-    color: #949494;
-    font-size: 18px;
-}
 .form__controls{
     display: grid;
-    padding: 0px;
-    grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
-}
-.form__button{
-    padding: 4px 15px;
+    padding: 0;
 
-    font-size: 24px;
-    color: var(--mainTextColor);
-    text-transform: uppercase;
 }
+
 .form__button:last-child{
-    grid-column: 2/3;
+    text-align: right;
 
     background: #4D4D4D;
     border: 0;
 }
-.form__button-o{
-    grid-column: 1/2;
 
-    background: #A47454;
+.form__button-o{
+    display: grid;
+    align-items: center;
 }

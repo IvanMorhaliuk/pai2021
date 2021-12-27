@@ -1,7 +1,7 @@
 <div class="header">
     <?php include_once __DIR__ . "/../../logo/html/logo.html" ?>
     <input class="search" type="search" placeholder="Search what you need">
-    <a class="notifications" href="#"><img src="/public/img/icons/notification-true.svg" alt="there are notifications"></a>
+    <a class="notifications" href="#"><img src="/public/img/icons/notification-false.svg" alt="there are notifications"></a>
     <div class="person">
         <img class="person__avatar" src="/public/img/header/avatars/avatar-placeholder.png" alt="avatar">
         <!-- /.avatar -->
