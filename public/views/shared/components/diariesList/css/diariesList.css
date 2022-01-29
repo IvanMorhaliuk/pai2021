@@ -42,18 +42,19 @@ img[alt="book cover"]{
     grid-auto-flow: column;
     place-items: center;
     place-content: center;
-    grid-gap: 33px;
+    grid-gap: 20px;
 
     transform: translateY(25%);
 }
 
 .list-view,.grid-view{
-
-    width: 35px;
+    padding: 0;
+    width: fit-content;
     height: 35px;
 
     background-color: #fff;
 }
+
 .list-view:hover,.grid-view:hover{
     cursor: pointer;
 }

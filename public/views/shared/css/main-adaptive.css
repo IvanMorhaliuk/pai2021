@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+    nav {
+        top: initial;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+}

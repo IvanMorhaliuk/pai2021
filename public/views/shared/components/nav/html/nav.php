@@ -1,21 +1,21 @@
 <div class="nav">
-    <a href="#" class="nav__elem nav__elem_active elem profile">
+    <a href="/profile" class="nav__elem elem profile">
         <img class="elem__img" src="/public/img/icons/icon-profile.svg" alt="icon-profile">
         <p class="elem__caption">Profile</p>
     </a>
-    <a href="#" class="nav__elem elem browse">
+    <a href="/search" class="nav__elem elem search">
         <img class="elem__img" src="/public/img/icons/icon-search.svg" alt="icon-search">
         <p class="elem__caption">Search</p>
     </a>
-    <a href="#" class="nav__elem elem shelf">
+    <a href="/shelf" class="nav__elem elem shelf">
         <img class="elem__img" src="/public/img/icons/icon-shelf.svg" alt="icon-shelf">
         <p class="elem__caption">Shelf</p>
     </a>
-    <a href="#" class="nav__elem elem stats">
+    <a href="/statistics" class="nav__elem elem stats">
         <img class="elem__img" src="/public/img/icons/icon-stats.svg" alt="icon-stats">
         <p class="elem__caption">Stats</p>
     </a>
-    <a href="#" class="nav__elem elem settings">
+    <a href="/settings" class="nav__elem elem settings">
         <img class="elem__img" src="/public/img/icons/icon-settings.svg" alt="icon-settings">
         <p class="elem__caption">Settings</p>
     </a>

@@ -5,6 +5,7 @@ $path = parse_url($path,PHP_URL_PATH);
 Routing::get('','DefaultController');
 Routing::post('login','SecurityController');
 Routing::get('register','DefaultController');
-Routing::get('profile','DefaultController');
+Routing::get('profile','SecurityController');
+Routing::get('search','SecurityController');
 Routing::run($path);
 

@@ -7,7 +7,5 @@ class DefaultController extends AppController{
     public function register(){
         $this->render('page-login-and-registration','register');
     }
-    public function profile(){
-        $this->render('page-profile','profile');
-    }
+
 }

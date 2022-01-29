@@ -8,7 +8,7 @@ class User
     private string $surname;
     private string $nickname;
     private array $privateBooksList;
-    public function __construct(string $email,string $nickname,string $password,string $name,string $surname,$privateBooksList=[])
+    public function __construct(string $email,string $password,string $nickname="",string $name = "",string $surname ="",$privateBooksList=[])
     {
         $this->email = $email;
         $this->password = $password;

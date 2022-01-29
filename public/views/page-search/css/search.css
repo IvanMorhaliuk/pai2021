@@ -1,0 +1,50 @@
+@import url("/public/views/shared/css/reset.css");
+@import url("/public/views/shared/css/normalize.css");
+@import url("/public/views/shared/css/main.css");
+@import url("/public/views/shared/components/logo/css/logo.css");
+@import url("/public/views/shared/components/header/css/header.css");
+@import url("/public/views/shared/components/nav/css/nav.css");
+@import url("/public/views/shared/components/diariesList/css/diariesList.css");
+@import url("/public/views/shared/components/overlay/css/overlay.css");
+@import url("/public/views/shared/css/main-adaptive.css");
+
+section {
+    padding: 30px 0;
+    border-top: 2px solid black;
+}
+h2{
+    font-size: 36px;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+.container {
+    padding: 0 100px;
+}
+.logo{
+    justify-self: start;
+}
+h1{
+    margin-bottom: 45px;
+}
+.search-bar-wrapper{
+    max-width: 80%;
+    margin-bottom: 20px;
+}
+.search-methods{
+    display: flex;
+    width: 40%;
+}
+.search-methods *{
+    color: #A6A6A6;
+    font-size: 18px;
+    line-height: 22px;
+}
+.search-methods__label{
+    flex-grow: 3;
+}
+.search-methods__author{
+    flex-grow: 2;
+}
+.search-methods__diary{
+    flex-grow: 1;
+}

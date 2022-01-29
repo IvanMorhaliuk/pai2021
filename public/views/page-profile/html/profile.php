@@ -6,9 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/public/views/page-profile/css/profile.css">
+    <link rel="stylesheet" href="/public/views/page-profile/css/adaptive.css">
     <title>Profile</title>
 </head>
 <body>
+
     <header>
         <div class="container">
             <?php include __DIR__ . "/../../shared/components/header/html/header.php" ?>
@@ -96,7 +98,7 @@
         <!-- /.container -->
     </section>
 
-
+    <?php include __DIR__ . "/../../shared/components/overlay/html/overlay.php" ?>
 
     <script type="module" src="/public/views/page-profile/scripts/profile.js"></script>
 </body>

@@ -1,9 +1,29 @@
 .nav{
     display: grid;
     height: 100%;
-    align-content: center;
-    grid-gap: 25px;
+    align-items: center;
+    grid-template:
+            "." 1fr
+            "." 1fr
+            "profile" 1fr
+            "browse" 1fr
+            "shelf" 1fr
+            "stats" 1fr
+            "." 1fr
+            "settings" 1fr
+            / 1fr;
+    padding: 27px 4px;
 
+}
+@media screen and (max-width: 768px) {
+    .nav{
+        grid-template:
+            "profile browse shelf stats settings" 1fr
+            /1fr 1fr 1fr 1fr 1fr;
+        padding: 0;
+        justify-items: center;
+
+    }
 }
 .nav__elem{
     display: grid;
@@ -12,21 +32,34 @@
     place-items: center;
 
 }
+.profile{
+    grid-area: profile;
+}
+.search{
+    grid-area: browse;
+}
+.shelf{
+    grid-area: shelf;
+}
+.stats{
+    grid-area: stats;
+}
+.settings{
+    grid-area: settings;
+}
 
 .nav__elem:hover,.nav__elem_active{
     background-color: rgba(164, 116, 84, 0.5);
 
 }
-.elem__img{
-    margin: 0 auto;
-}
+
 .elem__caption{
     color: var(--mainTextColor);
 }
 .settings{
-    position: absolute;
+    /*position: absolute;
     bottom: 27px;
     left: 50%;
 
-    transform: translateX(-50%);
+    transform: translateX(-50%);*/
 }
