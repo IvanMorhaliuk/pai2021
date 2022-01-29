@@ -7,5 +7,6 @@ Routing::post('login','SecurityController');
 Routing::get('register','DefaultController');
 Routing::get('profile','SecurityController');
 Routing::get('search','SecurityController');
+Routing::get('shelf','SecurityController');
 Routing::run($path);
 

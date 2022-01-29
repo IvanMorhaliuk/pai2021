@@ -8,20 +8,11 @@
 @import url("/public/views/shared/components/overlay/css/overlay.css");
 @import url("/public/views/shared/css/main-adaptive.css");
 
-section {
-    padding: 30px 0;
-    border-top: 2px solid black;
-}
+
 h2{
     font-size: 36px;
     line-height: 24px;
     margin-bottom: 20px;
-}
-.container {
-    padding: 0 100px;
-}
-.logo{
-    justify-self: start;
 }
 h1{
     margin-bottom: 45px;

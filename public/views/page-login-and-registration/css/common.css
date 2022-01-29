@@ -91,3 +91,6 @@ input::placeholder{
 
     background: #A47454;
 }
+.container{
+    padding: 0;
+}

@@ -1,0 +1,37 @@
+@import url("/public/views/shared/css/reset.css");
+@import url("/public/views/shared/css/normalize.css");
+@import url("/public/views/shared/css/main.css");
+@import url("/public/views/shared/components/logo/css/logo.css");
+@import url("/public/views/shared/components/header/css/header.css");
+@import url("/public/views/shared/components/nav/css/nav.css");
+@import url("/public/views/shared/components/bookshelf/css/bookshelf.css");
+@import url("/public/views/shared/css/main-adaptive.css");
+
+section{
+    border-top: none;
+}
+h1{
+    margin-bottom: 50px;
+}
+.diaries{
+    display: flex;
+    align-items: center;
+}
+.more:hover{
+    text-decoration: underline;
+}
+/*
+.in-cards {
+    column-count: 2;
+    column-fill: auto;
+
+    width: 13em;
+    height: 8em;
+
+    padding: 4px;
+    border: medium solid blue;
+    margin: 6px;
+
+    font: medium/1.3 Times New
+    Roman, Times, serif;
+}*/

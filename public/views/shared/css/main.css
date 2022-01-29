@@ -1,6 +1,7 @@
 :root{
     --mainBackgroundColor: #232323;
     --mainTextColor: #ffffff;
+    --bookshelfHeight: 300px;
 }
 
 *{
@@ -74,4 +75,7 @@ section{
     padding: 30px 0px;
     border-top: 2px solid black;
 
+}
+.container {
+    padding: 0 100px;
 }
