@@ -1,0 +1,54 @@
+@import url("/public/views/shared/css/reset.css");
+@import url("/public/views/shared/css/normalize.css");
+@import url("/public/views/shared/css/main.css");
+@import url("/public/views/shared/components/logo/css/logo.css");
+@import url("/public/views/shared/components/header/css/header.css");
+@import url("/public/views/shared/components/nav/css/nav.css");
+@import url("/public/views/shared/css/main-adaptive.css");
+
+h1{
+    margin-bottom: 50px;
+}
+.settings-buttons{
+    display: grid;
+    justify-content: start;
+    align-items: start;
+    grid-template-rows: repeat(4,70px);
+    grid-auto-rows: 85px;
+}
+.settings__button{
+    display: flex;
+    align-items: center;
+    padding: 15px 60px;
+    gap: 5px;
+
+    border: 2px solid transparent;
+    background-color: var(--mainBackgroundColor);
+    color: var(--mainTextColor);
+}
+.settings__button:last-child{
+    align-self: end;
+
+    background-color: #949494;
+}
+.settings__button:hover{
+    border: 2px solid var(--mainBackgroundColor);
+    background-color: var(--mainTextColor);
+    color: var(--mainBackgroundColor);
+
+}
+.settings__button:last-child:hover{
+    border: 2px solid #949494;
+    background-color: var(--mainTextColor);
+    color: #949494;
+}
+.settings__button:hover{
+    cursor: pointer;
+}
+.settings__button:hover .icon{
+    filter: invert();
+}
+.settings__button:last-child:hover .icon img{
+    filter: invert(99%) sepia(0%) saturate(7500%) hue-rotate(231deg) brightness(104%) contrast(102%);
+
+}

@@ -9,5 +9,6 @@ Routing::get('profile','SecurityController');
 Routing::get('search','SecurityController');
 Routing::get('shelf','SecurityController');
 Routing::get('statistics','SecurityController');
+Routing::get('settings','SecurityController');
 Routing::run($path);
 

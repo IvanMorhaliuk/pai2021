@@ -23,56 +23,58 @@
 </nav>
 
 <section class="statistics">
-    <h1>Statistics</h1>
-    <img src="/public/img/activities.png" alt="stats">
-    <div class="statistic-numbers">
-        <div class="stat">
-            <div class="label">
-                Given comments:
+    <div class="container">
+        <h1>Statistics</h1>
+        <img src="/public/img/activities.png" alt="stats">
+        <div class="statistic-numbers">
+            <div class="stat">
+                <div class="label">
+                    Given comments:
+                </div>
+                <!-- /.label -->
+                <div class="value">33</div>
+                <!-- /.value -->
             </div>
-            <!-- /.label -->
-            <div class="value">33</div>
-            <!-- /.value -->
-        </div>
-        <!-- /.given-comments -->
-        <div class="stat">
-            <div class="label">
-                Given likes:
+            <!-- /.given-comments -->
+            <div class="stat">
+                <div class="label">
+                    Given likes:
+                </div>
+                <!-- /.label -->
+                <div class="value">126</div>
+                <!-- /.value -->
             </div>
-            <!-- /.label -->
-            <div class="value">126</div>
-            <!-- /.value -->
-        </div>
-        <!-- /.given-likes -->
-        <div class="stat">
-            <div class="label">
-                Received comments:
+            <!-- /.given-likes -->
+            <div class="stat">
+                <div class="label">
+                    Received comments:
+                </div>
+                <!-- /.label -->
+                <div class="value">14</div>
+                <!-- /.value -->
             </div>
-            <!-- /.label -->
-            <div class="value">14</div>
-            <!-- /.value -->
-        </div>
-        <!-- /.received-comments -->
-        <div class="stat">
-            <div class="label">
-                Received comments:
+            <!-- /.received-comments -->
+            <div class="stat">
+                <div class="label">
+                    Received comments:
+                </div>
+                <!-- /.label -->
+                <div class="value">11</div>
+                <!-- /.value -->
             </div>
-            <!-- /.label -->
-            <div class="value">11</div>
-            <!-- /.value -->
-        </div>
-        <!-- /.received-likes -->
-        <div class="stat">
-            <div class="label">
-                Time on daily repo:
+            <!-- /.received-likes -->
+            <div class="stat">
+                <div class="label">
+                    Time on daily repo:
+                </div>
+                <!-- /.label -->
+                <div class="value">245h</div>
+                <!-- /.value -->
             </div>
-            <!-- /.label -->
-            <div class="value">245h</div>
-            <!-- /.value -->
+            <!-- /.time-on-site -->
         </div>
-        <!-- /.time-on-site -->
+        <!-- /.statistic-numbers -->
     </div>
-    <!-- /.statistic-numbers -->
 </section>
 
 <script src="/public/views/page-statistics/scripts/statistics.js"></script>

@@ -12,7 +12,7 @@
             <div class="dropdown menu__dropdown" id="dropdown">
                 <a class="dropdown__elem" href="#">Profile</a>
                 <a class="dropdown__elem" href="#">Edit profile</a>
-                <a class="dropdown__elem" href="#">Exit</a>
+                <a class="dropdown__elem" href="/">Log out</a>
                 <button class="close dropdown__close" id="dropdown_close"></button>
             </div>
             <!-- /.dropdown -->

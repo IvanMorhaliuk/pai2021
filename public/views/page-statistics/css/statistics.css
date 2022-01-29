@@ -6,9 +6,6 @@
 @import url("/public/views/shared/components/nav/css/nav.css");
 @import url("/public/views/shared/css/main-adaptive.css");
 
-section{
-    padding-left: 100px;
-}
 h1{
     margin-bottom: 50px;
 }
@@ -22,7 +19,7 @@ h1{
     display: flex;
     justify-content: space-between;
     padding: 50px 20px;
-    
+
     border: 1px solid #232323;
 }
 .stat:last-child{
