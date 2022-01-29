@@ -8,5 +8,6 @@ Routing::get('register','DefaultController');
 Routing::get('profile','SecurityController');
 Routing::get('search','SecurityController');
 Routing::get('shelf','SecurityController');
+Routing::get('statistics','SecurityController');
 Routing::run($path);
 

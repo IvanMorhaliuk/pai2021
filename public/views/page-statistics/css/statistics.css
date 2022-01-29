@@ -1,0 +1,30 @@
+@import url("/public/views/shared/css/reset.css");
+@import url("/public/views/shared/css/normalize.css");
+@import url("/public/views/shared/css/main.css");
+@import url("/public/views/shared/components/logo/css/logo.css");
+@import url("/public/views/shared/components/header/css/header.css");
+@import url("/public/views/shared/components/nav/css/nav.css");
+@import url("/public/views/shared/css/main-adaptive.css");
+
+section{
+    padding-left: 100px;
+}
+h1{
+    margin-bottom: 50px;
+}
+.statistic-numbers{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 40px;
+}
+.stat{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 20px;
+    
+    border: 1px solid #232323;
+}
+.stat:last-child{
+    grid-column: 1/-1;
+}

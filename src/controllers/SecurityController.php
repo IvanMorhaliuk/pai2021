@@ -39,6 +39,10 @@ class SecurityController extends AppController
         $user = $this->getUser();
         return $this->render('page-shelf', 'shelf', ['user' => $user]);
     }
+    public function statistics(){
+        $user = $this->getUser();
+        return $this->render('page-statistics', 'statistics', ['user' => $user]);
+    }
 
     public function getUser(): User
     {
