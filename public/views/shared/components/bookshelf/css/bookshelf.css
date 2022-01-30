@@ -175,6 +175,6 @@
     padding-right: 10px;
     text-align: right;
 }
-.bk-book__desc{
-    display: none;
+.bk-book__desc, .bk-book__content{
+    display: none !important;
 }

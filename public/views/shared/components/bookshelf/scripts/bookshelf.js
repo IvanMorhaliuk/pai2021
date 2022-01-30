@@ -28,7 +28,7 @@ export default class Bookshelf {
                     </h2>
                 </div>
                 <div class="bk-top"></div>
-
+                <div class="bk-book__content">${book.content}</div>
             </div>
         </li>`;
     }

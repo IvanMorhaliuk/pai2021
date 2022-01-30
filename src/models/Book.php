@@ -6,6 +6,17 @@ class Book implements JsonSerializable
     private string $description;
     private string $coverSrc;
     private string $date;
+    private $contentHTML;
+
+    public function getContentHTML()
+    {
+        return $this->contentHTML;
+    }
+
+    public function setContentHTML($contentHTML): void
+    {
+        $this->contentHTML = $contentHTML;
+    }
 
     public function __construct(string $title,string $description,string $coverSrc,string $date)
     {
@@ -55,15 +66,7 @@ class Book implements JsonSerializable
         $this->date = $date;
     }
 
-    /*public function to_json(): bool|string
-    {
-        return json_encode(array(
-            'Title' => $this->title,
-            'Date' => $this->date,
-            'Description' => $this->description,
-            'CoverSrc' => $this->coverSrc,
-        ));
-    }*/
+
 
 
     public function jsonSerialize(): array
@@ -73,6 +76,7 @@ class Book implements JsonSerializable
             'date' => $this->date,
             'description' => $this->description,
             'coverSrc' => $this->coverSrc,
+            'content' => $this->contentHTML,
         ];
     }
 }

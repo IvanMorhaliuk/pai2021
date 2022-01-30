@@ -1,0 +1,27 @@
+.book-entity__cover{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+    width: 70vw;
+    height: 90vh;
+    margin: 0 auto;
+    padding: 20px;
+
+    border-radius: 5px;
+    background-color: #A47454;
+}
+.book-entity__content{
+    column-count: 2;
+    column-fill: auto;
+    overflow: auto;
+
+    height: 100%;
+    padding: 20px;
+
+    background-color: #fff;
+}
+.book-entity__content h1{
+    margin: 20px 0;
+}

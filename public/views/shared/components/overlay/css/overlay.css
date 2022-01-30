@@ -1,3 +1,5 @@
+@import url("/public/views/shared/components/book/css/book.css");
+
 .overlay{
     position: fixed;
     top: 0;
@@ -86,4 +88,31 @@
 .pop-up__desc p{
     font-size: 14px;
     line-height: 17px;
+}
+.book-entity{
+    display: none;
+}
+.book-entity__close{
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+
+    background-color: transparent;
+}
+button:hover,.book-entity__close:hover{
+    cursor: pointer;
+}
+.book-entity__edit-panel{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 5%;
+    background-color: var(--mainBackgroundColor);
+    color: var(--mainTextColor);
 }
