@@ -16,7 +16,7 @@
 
     <?php foreach ($user->getPrivateBooksList() as $book ): ?>
     <div class="books__item">
-        <img src="<?= $book->getCoverSrc() ?>" alt="book cover">
+        <img class="item-cover" src="<?= $book->getCoverSrc() ?>" alt="book cover">
         <div class="item-info">
             <p class="item-caption"><?= $book->getTitle() ?></p>
             <p class="item-desc"><?= $book->getDescription() ?></p>

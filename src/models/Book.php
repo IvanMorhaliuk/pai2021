@@ -1,6 +1,6 @@
 <?php
 
-class Book
+class Book implements JsonSerializable
 {
     private string $title;
     private string $description;
@@ -55,5 +55,24 @@ class Book
         $this->date = $date;
     }
 
+    /*public function to_json(): bool|string
+    {
+        return json_encode(array(
+            'Title' => $this->title,
+            'Date' => $this->date,
+            'Description' => $this->description,
+            'CoverSrc' => $this->coverSrc,
+        ));
+    }*/
 
+
+    public function jsonSerialize(): array
+    {
+        return [
+            'title' => $this->title,
+            'date' => $this->date,
+            'description' => $this->description,
+            'coverSrc' => $this->coverSrc,
+        ];
+    }
 }

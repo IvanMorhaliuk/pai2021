@@ -35,26 +35,12 @@
             <a href="#" class="more">More...</a>
         </div>
         <!-- /.private-diaries -->
-
-        <h2>Public</h2>
-        <div class="public-diaries diaries">
-            <?php include __DIR__ . "/../../shared/components/bookshelf/html/bookshelf.php" ?>
-            <a href="#" class="more">More...</a>
-        </div>
-        <!-- /.public-diaries -->
-
-        <h2>Other</h2>
-        <div class="other-diaries diaries">
-            <?php include __DIR__ . "/../../shared/components/bookshelf/html/bookshelf.php" ?>
-            <a href="#" class="more">More...</a>
-        </div>
-        <!-- /.other-diaries -->
-
     </div>
     <!-- /.container -->
 </section>
 
+<?php include __DIR__ . "/../../shared/components/overlay/html/overlay.php" ?>
 
-<script src="/public/views/page-shelf/scripts/shelf.js"></script>
+<script type="module" src="/public/views/page-shelf/scripts/shelf.js"></script>
 </body>
 </html>

@@ -43,6 +43,6 @@
 
 <?php include __DIR__ . "/../../shared/components/overlay/html/overlay.php" ?>
 
-<script src="/public/views/page-search/scripts/search.js"></script>
+<script type="module" src="/public/views/page-search/scripts/search.js"></script>
 </body>
 </html>
