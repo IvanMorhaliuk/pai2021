@@ -100,7 +100,7 @@
 
     background-color: transparent;
 }
-button:hover,.book-entity__close:hover{
+button:hover,.book-entity__close:hover,.book-entity__done{
     cursor: pointer;
 }
 .book-entity__edit-panel{
@@ -112,7 +112,30 @@ button:hover,.book-entity__close:hover{
     align-items: center;
     gap: 10px;
     width: 100%;
-    height: 5%;
+    height: 10%;
     background-color: var(--mainBackgroundColor);
     color: var(--mainTextColor);
+}
+.book-entity__edit-panel>div{
+    display: flex;
+}
+.book-entity__edit-panel img:last-child{
+    filter: invert();
+}
+.book-entity__edit-panel select,.book-entity__edit-panel option{
+    background-color: var(--mainBackgroundColor);
+    color: var(--mainTextColor);
+}
+.book-entity__done{
+    position: absolute;
+    z-index: 10;
+    top: 20px;
+    right: 60px;
+    display: none;
+
+    background-image: url("/public/img/icons/done.svg");
+    background-color: transparent;
+}
+.book-entity__done:hover{
+    background-color: green;
 }

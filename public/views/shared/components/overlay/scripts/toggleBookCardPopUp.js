@@ -9,8 +9,6 @@ export default class ToggleBookCardPopUp {
         return this.#clickedElement;
     }
 
-
-
     get overlay() {
         return this.#overlay;
     }
@@ -35,24 +33,11 @@ export default class ToggleBookCardPopUp {
         this.#overlay.querySelector(".pop-up__book-close").addEventListener("click",function (){
             this.#overlay.style.display = "none";
         }.bind(this));
-        /*this.#overlay.querySelector(".read").addEventListener("click",function (){
-            // this.#overlay.querySelector(".pop-up").style.display = "none";
-            this.#overlay.querySelector(".book-entity").style.display = "block";
-
-            let content = this.#overlay.querySelector(".book-entity__content");
-
-        }.bind(this));
-        this.#overlay.querySelector(".book-entity__close").addEventListener("click",function (){
-            this.#overlay.querySelector(".book-entity").style.display = "none";
-        }.bind(this));*/
     }
 
     _findTarget(elem,className){
         if(elem.className !== className) return this._findTarget(elem.parentElement,className);
         return elem;
     }
-    /*loadBook(book){
-        document.querySelector(".book-entity__content").innerHTML = book.content;
-    }*/
 }
 

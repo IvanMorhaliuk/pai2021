@@ -27,6 +27,7 @@
     <!-- /.pop-up -->
 
     <div class="book-entity">
+        <div class="close book-entity__done"></div>
         <div class="close book-entity__close"></div>
         <?php include __DIR__ . "/../../book/html/book.php" ?>
         <div class="book-entity__edit-panel">
@@ -73,6 +74,17 @@
                     <option value="black">Black</option>
                     <option value="white">White</option>
                 </select>
+            </div>
+            <div id="toolBar2">
+                <img class="intLink" id="bold" title="Bold"  src="/public/img/icons/bx_bx-bold.svg" />
+                <img class="intLink" id="italic" title="Italic" src="/public/img/icons/italic.svg" />
+                <img class="intLink" id="underline" title="Underline" src="/public/img/icons/underline.svg" />
+                <img class="intLink" id="lAlign" title="Left align" src="/public/img/icons/ta-left.svg" />
+                <img class="intLink" id="cAlign" title="Center align" src="/public/img/icons/ta-center.svg" />
+                <img class="intLink" id="rAlign" title="Right align" src="/public/img/icons/ta-right.svg" />
+                <img class="intLink" id="o-list" title="Numbered list" src="/public/img/icons/o-list.svg" />
+                <img class="intLink" id="u-list" title="Dotted list" src="/public/img/icons/u-list.svg" />
+                <img class="intLink" id="link" title="Hyperlink" src="/public/img/icons/link.svg" />
             </div>
         </div>
     </div>
