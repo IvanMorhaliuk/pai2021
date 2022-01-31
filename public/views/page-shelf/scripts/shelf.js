@@ -2,21 +2,16 @@ import Bookshelf from "/public/views/shared/components/bookshelf/scripts/bookshe
 import ToggleBookCardPopUp from "/public/views/shared/components/overlay/scripts/toggleBookCardPopUp.js";
 import EditorUtils from "/public/views/shared/scripts/editorUtils.js";
 
-
-
-
-
-
 window.onload = async function (){
     import("/public/views/shared/components/header/scripts/menu.js");
     import("/public/views/shared/components/nav/scripts/ActiveTabProvider.js");
 
-    /*fetch("/temp_get.php")
+    /*fetch("/booksProvider.php")
         .then((response) => response.json())
         .then( (response) => {
             new Bookshelf(response).render()});*/
     let json;
-    let response = await fetch("/temp_get.php");
+    let response = await fetch("/booksProvider.php");
     if (response.ok){
         json = await response.json();
     }
@@ -56,20 +51,28 @@ window.onload = async function (){
         popUp.overlay.querySelector(".book-entity__content").setAttribute("contenteditable", "false");
     }
 
-    popUp.overlay.querySelector(".book-entity__done").addEventListener("click",function (){
-
+    popUp.overlay.querySelector(".book-entity__done").addEventListener("click", function (){
         popUp.clickedElement.querySelector(".bk-book__content").innerHTML =
             popUp.overlay.querySelector(".book-entity__content").innerHTML;
-        console.log(popUp.clickedElement);
+
+
+        const data = { bookContentHtml: popUp.clickedElement.querySelector('.bk-book__content').innerHTML.toString()};
+        fetch("/booksCollector.php",{
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+        });
+
         closeBookEntity();
     });
+
     popUp.overlay.querySelector(".book-entity__close").addEventListener("click",function (){
         closeBookEntity();
     });
 
 
     /*let json;
-    let response = await fetch("/temp_get.php");
+    let response = await fetch("/booksProvider.php");
     if (response.ok){
         json = await response.json();
 

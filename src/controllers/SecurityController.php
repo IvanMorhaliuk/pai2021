@@ -3,15 +3,24 @@
 require_once 'AppController.php';
 require_once __DIR__ . "/../models/User.php";
 require_once __DIR__ . "/../models/Book.php";
+require_once __DIR__ . "/../repository/UserRepository.php";
 class SecurityController extends AppController
 {
     public function login(){
-        $user = $this->getUser();
+        $userRepository = new UserRepository();
+
         if(!$this->isPost())
             return $this->render('page-login-and-registration', 'login');
 
         $email = $_POST["email"];
         $password = $_POST["password"];
+
+        $user = $userRepository->getUser($email);
+        if(!$user){
+            return $this->render('page-login-and-registration', 'login', ['messages' => [
+                "User does not exist!"
+            ]]);
+        }
 
         if($user->getEmail() !== $email) {
             return $this->render('page-login-and-registration', 'login', ['messages' => [
@@ -24,6 +33,8 @@ class SecurityController extends AppController
             ]]);
         }
 
+        /*$url = "http://$_SERVER[HTTP_HOST]";
+        header("Location: {$url}/projects");*/
         return $this->render('page-profile','profile',['user' => $user]);
     }
     public function search(){
@@ -48,7 +59,7 @@ class SecurityController extends AppController
         return $this->render('page-settings', 'settings', ['user' => $user]);
     }
 
-    public function getUser(): User
+    /*public function getUser(): User
     {
         $user = new User("jsnow@pk.edu.pl", "admin", "adminjohn_SSS", "John", "Snow");
         $booksList = [
@@ -63,6 +74,6 @@ class SecurityController extends AppController
         ];
         $user->setPrivateBooksList($booksList);
         return $user;
-    }
+    }*/
 
 }

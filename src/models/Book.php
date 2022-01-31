@@ -2,13 +2,14 @@
 
 class Book implements JsonSerializable
 {
+
     private string $title;
     private string $description;
     private string $coverSrc;
     private string $date;
-    private $contentHTML;
+    private string $contentHTML;
 
-    public function getContentHTML()
+    public function getContentHTML(): string
     {
         return $this->contentHTML;
     }
