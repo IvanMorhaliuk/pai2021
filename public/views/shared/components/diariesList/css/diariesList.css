@@ -36,6 +36,7 @@ img[alt="book cover"]{
     grid-auto-flow: column;
     align-items: baseline;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 .books__view{
     display: grid;

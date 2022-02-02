@@ -11,7 +11,7 @@ export default class Bookshelf {
 
     createBookRepresentation(book) {
         return `
-        <li class="book" style="z-index: ${book.zIndex}">
+        <li class="book" id="bookId-${book['id']}" style="z-index: ${book.zIndex}">
             <div class="bk-book book-1">
                 <div class="bk-front">
                     <div class="bk-cover-back"></div>
@@ -24,11 +24,10 @@ export default class Bookshelf {
                     <h2>
                         <span class="bk-book__title">${book.title}</span>
                         <span class="bk-book__date">${book.date}</span>
-                        <span class="bk-book__desc">${book.description}</span>
+                      
                     </h2>
                 </div>
                 <div class="bk-top"></div>
-                <div class="bk-book__content">${book.content}</div>
             </div>
         </li>`;
     }

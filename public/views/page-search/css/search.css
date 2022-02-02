@@ -9,33 +9,40 @@
 @import url("/public/views/shared/css/main-adaptive.css");
 
 
-h2{
+h2 {
     font-size: 36px;
     line-height: 24px;
     margin-bottom: 20px;
 }
-h1{
+
+h1 {
     margin-bottom: 45px;
 }
-.search-bar-wrapper{
+
+.search-bar-wrapper {
     max-width: 80%;
     margin-bottom: 20px;
 }
-.search-methods{
+
+.search-methods {
     display: flex;
-    width: 40%;
+    gap: 10px;
 }
-.search-methods *{
+
+.search-methods * {
     color: #A6A6A6;
     font-size: 18px;
     line-height: 22px;
 }
-.search-methods__label{
+
+.search-methods__label {
     flex-grow: 3;
 }
-.search-methods__author{
+
+.search-methods__author {
     flex-grow: 2;
 }
-.search-methods__diary{
+
+.search-methods__diary {
     flex-grow: 1;
 }

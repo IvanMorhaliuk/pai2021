@@ -1,4 +1,3 @@
-<?php if(!isset($user)) {echo "You have no rights!";die();} ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,19 +26,19 @@
             <div class="account__profile">
                 <div class="avatar"><img src="/public/img/avatar.png" alt="avatar"></div>
                 <!-- /.avatar -->
-                <div class="nickname"><?= $user->getNickname() ?></div>
+                <div class="nickname"></div>
                 <div class="personal-info">
                     <div class="key">Name</div>
                     <!-- /.key -->
-                    <div class="value"><?= $user->getName() ?></div>
+                    <div class="value"></div>
                     <!-- /.value -->
                     <div class="key">Surname</div>
                     <!-- /.key -->
-                    <div class="value"><?= $user->getSurname() ?></div>
+                    <div class="value"></div>
                     <!-- /.value -->
                     <div class="key">Date Of birth</div>
                     <!-- /.key -->
-                    <div class="value">24/10/1994</div>
+                    <div class="value"></div>
                     <!-- /.value -->
                     <div class="key">City</div>
                     <!-- /.key -->

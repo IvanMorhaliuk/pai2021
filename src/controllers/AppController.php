@@ -1,11 +1,13 @@
 <?php
+require_once __DIR__ . '/../../Session.php';
 
 class AppController{
     private string $request;
-
+    protected Session $session;
     public function __construct()
     {
         $this->request = $_SERVER["REQUEST_METHOD"];
+        $this->session = new Session();
     }
     protected function isPost(): bool
     {

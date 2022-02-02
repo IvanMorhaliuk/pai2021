@@ -1,0 +1,46 @@
+.add-book-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(35, 35, 35, 0.5);
+}
+
+.add-book-overlay * {
+    box-sizing: border-box;
+}
+
+.add-book {
+    max-width: 600px;
+    background: #A47454;
+}
+
+.add-book__form-upper-wrapper {
+    display: flex;
+}
+
+.add-book__form-title-wrapper {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.add-book__form {
+    margin: 0;
+    padding: 35px 50px;
+    display: grid;
+    grid-gap: 20px;
+    justify-items: end;
+
+    color: white;
+}
+
+.add-book__form textarea {
+    width: 100%;
+    resize: none;
+}

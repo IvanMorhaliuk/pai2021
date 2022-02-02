@@ -1,6 +1,6 @@
 .search-bar{
     width: 100%;
-    padding: 3px 15px;
+    padding: 3px 45px;
 
     background-image: url("/public/img/icons/fe_search.svg");
     background-repeat: no-repeat;
@@ -10,7 +10,6 @@
 }
 .search-bar::placeholder{
     padding-left: 40px;
-
 
     line-height: 24px;
     color: #A6A6A6;

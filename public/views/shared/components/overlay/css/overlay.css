@@ -95,7 +95,7 @@
 .book-entity__close{
     position: absolute;
     z-index: 10;
-    top: 20px;
+    top: 5px;
     right: 20px;
 
     background-color: transparent;
@@ -129,7 +129,7 @@ button:hover,.book-entity__close:hover,.book-entity__done{
 .book-entity__done{
     position: absolute;
     z-index: 10;
-    top: 20px;
+    top: 5px;
     right: 60px;
     display: none;
 

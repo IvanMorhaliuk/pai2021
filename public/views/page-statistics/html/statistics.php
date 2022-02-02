@@ -1,7 +1,3 @@
-<?php if (!isset($user)) {
-    echo "You have no rights!";
-    die();
-} ?>
 <!doctype html>
 <html lang="en">
 <head>

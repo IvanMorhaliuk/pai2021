@@ -7,5 +7,8 @@ class DefaultController extends AppController{
     public function register(){
         $this->render('page-login-and-registration','register');
     }
+    public function search(){
+        return $this->render('page-search','search');
+    }
 
 }

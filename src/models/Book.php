@@ -8,6 +8,29 @@ class Book implements JsonSerializable
     private string $coverSrc;
     private string $date;
     private string $contentHTML;
+    private $id;
+
+
+
+    public function __construct(string $title,string $description,string $coverSrc,string $date,string $content, $id = null)
+    {
+        $this->title = $title;
+        $this->description = $description;
+        $this->coverSrc = $coverSrc;
+        $this->date = $date;
+        $this->contentHTML = $content;
+        $this->id = $id;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
+    public function setId(int $id): void
+    {
+        $this->id = $id;
+    }
 
     public function getContentHTML(): string
     {
@@ -17,14 +40,6 @@ class Book implements JsonSerializable
     public function setContentHTML($contentHTML): void
     {
         $this->contentHTML = $contentHTML;
-    }
-
-    public function __construct(string $title,string $description,string $coverSrc,string $date)
-    {
-        $this->title = $title;
-        $this->description = $description;
-        $this->coverSrc = $coverSrc;
-        $this->date = $date;
     }
 
     public function getTitle(): string
@@ -67,12 +82,10 @@ class Book implements JsonSerializable
         $this->date = $date;
     }
 
-
-
-
     public function jsonSerialize(): array
     {
         return [
+            'id' => $this->id,
             'title' => $this->title,
             'date' => $this->date,
             'description' => $this->description,

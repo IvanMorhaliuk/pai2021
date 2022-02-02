@@ -6,6 +6,7 @@ require_once __DIR__ . "/../models/Book.php";
 require_once __DIR__ . "/../repository/UserRepository.php";
 class SecurityController extends AppController
 {
+
     public function login(){
         $userRepository = new UserRepository();
 
@@ -32,48 +33,63 @@ class SecurityController extends AppController
                 "Your password is incorrect!"
             ]]);
         }
-
+        $this->session->createSession($email);
         /*$url = "http://$_SERVER[HTTP_HOST]";
         header("Location: {$url}/projects");*/
         return $this->render('page-profile','profile',['user' => $user]);
     }
-    public function search(){
-        $user = $this->getUser();
-        return $this->render('page-search','search',['user' => $user]);
+
+    public function logout(){
+        session_start();
+        $this->session->closeSession();
+        return $this->render('page-login-and-registration', 'login');
     }
+
     public function profile(){
-        $user = $this->getUser();
-        return $this->render('page-profile','profile',['user' => $user]);
+        session_start();
+        if(!$_SESSION['email']){
+            echo "no rights";
+            die();
+        }else{
+            return $this->render('page-profile','profile',/*['user' => $user]*/);
+        }
+    }
+    public function search(){
+        session_start();
+        if(!$_SESSION['email']){
+            echo "no rights";
+            die();
+        }else{
+            return $this->render('page-search','search',/*['user' => $user]*/);
+        }
     }
 
     public function shelf(){
-        $user = $this->getUser();
-        return $this->render('page-shelf', 'shelf', ['user' => $user]);
+        session_start();
+        if(!$_SESSION['email']){
+            echo "no rights";
+            die();
+        }else{
+            return $this->render('page-shelf', 'shelf', /*['user' => $user]*/);
+        }
     }
     public function statistics(){
-        $user = $this->getUser();
-        return $this->render('page-statistics', 'statistics', ['user' => $user]);
+        session_start();
+        if(!$_SESSION['email']){
+            echo "no rights";
+            die();
+        }else{
+            return $this->render('page-statistics', 'statistics', /*['user' => $user]*/);
+        }
     }
     public function settings(){
-        $user = $this->getUser();
-        return $this->render('page-settings', 'settings', ['user' => $user]);
+        //$user = $this->getUser();
+        session_start();
+        if(!$_SESSION['email']){
+            echo "no rights";
+            die();
+        }else{
+            return $this->render('page-settings', 'settings', /*['user' => $user]*/);
+        }
     }
-
-    /*public function getUser(): User
-    {
-        $user = new User("jsnow@pk.edu.pl", "admin", "adminjohn_SSS", "John", "Snow");
-        $booksList = [
-            new Book("title 1", "desc 1", "/public/img/bookitem.png", "20/20/2020"),
-            new Book("title 2", "desc 2", "/public/img/bookitem.png", "20/20/2020"),
-            new Book("title 3", "desc 3", "/public/img/bookitem.png", "20/20/2020"),
-            new Book("title 4", "desc 4", "/public/img/bookitem.png", "20/20/2020"),
-            new Book("title 4", "desc 4", "/public/img/bookitem.png", "20/20/2020"),
-            new Book("title 4", "desc 4", "/public/img/bookitem.png", "20/20/2020"),
-            new Book("title 4", "desc 4", "/public/img/bookitem.png", "20/20/2020"),
-            new Book("title 4", "desc 4", "/public/img/bookitem.png", "20/20/2020"),
-        ];
-        $user->setPrivateBooksList($booksList);
-        return $user;
-    }*/
-
 }

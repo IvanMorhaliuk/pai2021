@@ -1,7 +1,3 @@
-<?php if (!isset($user)) {
-    echo "You have no rights!";
-    die();
-} ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -29,11 +25,7 @@
             <?php include __DIR__ . "/../../shared/components/search-bar/html/search-bar.php" ?>
         </div>
         <!-- /.search-bar-wrapper -->
-        <div class="search-methods">
-            <div class="search-methods__label">Sorted by</div>
-            <button class="search-methods__author">Author</button>
-            <button class="search-methods__diary">Dairy</button>
-        </div>
+
 
         <?php include __DIR__ . "/../../shared/components/diariesList/html/diariesList.php" ?>
     </div>
