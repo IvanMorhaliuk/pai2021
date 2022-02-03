@@ -23,11 +23,11 @@
                     <fieldset class="form__inputs">
                         <legend>Login</legend>
                         <div class="form__input-wrapper">
-                            <input type="email" name="email" id="login" placeholder="email">
+                            <input type="email" name="email" id="login" placeholder="email" required>
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="password" name="password" id="password" placeholder="password">
+                            <input type="password" name="password" id="password" placeholder="password" required>
                         </div>
                         <!-- /.form-input-wrapper -->
                     </fieldset>

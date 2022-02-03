@@ -23,23 +23,23 @@
                     <fieldset class="form__inputs">
                         <legend>Create Profile</legend>
                         <div class="form__input-wrapper">
-                            <input type="text" name="name" id="name" placeholder="name">
+                            <input type="text" name="name" id="name" placeholder="name" required>
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="text" name="surname" id="surname" placeholder="surname">
+                            <input type="text" name="surname" id="surname" placeholder="surname" required>
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="date" name="birthday" id="dateOfBirth" placeholder="date of birth">
+                            <input type="date" name="birthday" id="dateOfBirth" placeholder="date of birth" required>
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="email" name="email" id="login" placeholder="email">
+                            <input type="email" name="email" id="login" placeholder="email" required>
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="password" name="password" id="password" placeholder="create password">
+                            <input type="password" name="password" id="password" placeholder="create password" required>
                         </div>
                         <!-- /.form-input-wrapper -->
                     </fieldset>

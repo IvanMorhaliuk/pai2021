@@ -10,7 +10,7 @@
             ?>
         </div>
 
-        <form action="/addBook" method="post" enctype="multipart/form-data" class="add-book__form">
+        <form action="/addbook" method="post" enctype="multipart/form-data" class="add-book__form">
             <div class="add-book__form-upper-wrapper">
                 <input class="add-book__cover" name="cover" type="file" id="cover">
                 <div class="add-book__form-title-wrapper">

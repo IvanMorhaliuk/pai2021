@@ -101,8 +101,6 @@ class SecurityController extends AppController
 
         $user = $userRepository->getUser($email);
         if ($user) {
-//            format('Y-m-d')
-            echo $birthday;
             $this->render('page-login-and-registration', 'register',['messages' => "Such user already exists"]);
 
         }else{
