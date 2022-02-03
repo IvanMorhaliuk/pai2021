@@ -30,7 +30,7 @@ class SecurityController extends AppController
                 "User with this email do not exist!"
             ]]);
         }
-        if ($password !== $user->getPassword()) {
+        if (!password_verify($password,$user->getPassword())) {
             return $this->render('page-login-and-registration', 'login', ['messages' => [
                 "Your password is incorrect!"
             ]]);
@@ -64,7 +64,7 @@ class SecurityController extends AppController
     {
         session_start();
         if(!$this->validateUser()) die();
-        return $this->render('page-search', 'search',/*['user' => $user]*/);
+        return $this->render('page-search', 'search');
     }
 
     public function shelf()
@@ -87,7 +87,7 @@ class SecurityController extends AppController
         if(!$this->validateUser()) die();
         return $this->render('page-settings', 'settings', /*['user' => $user]*/);
     }
-    /*public function registeruser(){
+    public function registeruser(){
         $userRepository = new UserRepository();
 
         if (!$this->isPost())
@@ -101,12 +101,20 @@ class SecurityController extends AppController
 
         $user = $userRepository->getUser($email);
         if ($user) {
-            $this->render('page-login-and-registration', 'register');
-            echo true;
+//            format('Y-m-d')
+            echo $birthday;
+            $this->render('page-login-and-registration', 'register',['messages' => "Such user already exists"]);
+
         }else{
+            $date = DateTime::createFromFormat('Y-m-d',$birthday);
+            $date = $date->format('Y-m-d');
             $user = new User($email,password_hash($password,PASSWORD_DEFAULT),
-                $name,$surname,$name . " " . $surname,$birthday);
+                $name,$surname,$name . " " . $surname,$date);
             $userRepository->register($user);
         }
-    }*/
+
+
+
+
+    }
 }

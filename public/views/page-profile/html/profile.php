@@ -40,24 +40,6 @@
                     <!-- /.key -->
                     <div class="value user-birthday"></div>
                     <!-- /.value -->
-                    <div class="key">City</div>
-                    <!-- /.key -->
-                    <div class="value">London</div>
-                    <!-- /.value -->
-                    <div class="key">Country</div>
-                    <!-- /.key -->
-                    <div class="value">United Kingdom</div>
-                    <!-- /.value -->
-                    <div class="key">Hobbies</div>
-                    <!-- /.key -->
-                    <div class="value">reading, music, art</div>
-                    <!-- /.value -->
-                    <div class="key">Links</div>
-                    <!-- /.key -->
-                    <div class="value">
-                        <a href="#">https:twitter.com/john_art</a>
-                    </div>
-                    <!-- /.value -->
                 </div>
                 <!-- /.personal-info -->
                 <div class="links">

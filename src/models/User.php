@@ -9,10 +9,10 @@ class User
     private string $surname;
     private string $nickname;
     private string $birthday;
-    private $id;
+    private int $id;
 
     public function __construct(string $email,string $password,string $name = "",string $surname ="",string $nickname =""
-        ,string $birthday = "", $id = null)
+        ,string $birthday = "", $id = 0)
     {
         $this->email = $email;
         $this->password = $password;

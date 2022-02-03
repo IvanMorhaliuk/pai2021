@@ -16,7 +16,7 @@ class BookController extends AppController
         $this->bookRepository = new BookRepository();
     }
 
-    public function addBook(){
+    public function addbook(){
         session_start();
         if(!$this->validateUser()) die();
         if($this->isPost() && is_uploaded_file($_FILES["cover"]['tmp_name']) && $this->validate($_FILES["cover"])){
@@ -38,7 +38,7 @@ class BookController extends AppController
         $this->render("shared/components/add-book","add-book",['messages' => $this->messages]);
     }
 
-    public function getAllBooks(){
+    public function getallbooks(){
         session_start();
         if(!$this->validateUser()) die();
         $books = $this->bookRepository->getAllBooks();

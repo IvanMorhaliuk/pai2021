@@ -36,18 +36,32 @@ class UserRepository extends Repository
     }
     public function register(User $user){
 
+
         $statement = $this->database->connect()->prepare('
-            INSERT INTO public.users join users_details ud on ud.id = users.id_users_details 
-            VALUES (email,password,name,surname,nickname,birthday)
+            INSERT INTO public.users_details (name,surname,nickname,birthday)
+            VALUES (?,?,?,?) RETURNING id
+        ');
+        $statement->execute(
+            [
+                $user->getName(),
+                $user->getSurname(),
+                $user->getNickname(),
+                $user->getBirthday(),
+            ]
+        );
+
+        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        $detailsId = $result[0]['id'];
+        $statement = $this->database->connect()->prepare('
+            INSERT INTO public.users (email,password,id_users_details)
+            VALUES (?,?,?) 
         ');
         $statement->execute([
             $user->getEmail(),
             $user->getPassword(),
-            $user->getName(),
-            $user->getSurname(),
-            $user->getNickname(),
-            $user->getBirthday(),
+            $detailsId
         ]);
+
     }
 
 }

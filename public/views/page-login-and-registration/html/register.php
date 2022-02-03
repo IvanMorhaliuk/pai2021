@@ -47,6 +47,12 @@
                     <fieldset class="form__controls">
                         <button type="submit" class="form__button form__button-o" href="#">Register</button>
                     </fieldset>
+                    <div class="messages_tmp">
+                        <?php if(isset($messages)){
+                                echo $messages;
+                        }
+                        ?>
+                    </div>
                 </form>
             </div>
             <!-- /.register-page__form -->

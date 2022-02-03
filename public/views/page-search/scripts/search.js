@@ -14,9 +14,12 @@ window.onload = function (){
             <button class="search-methods__author">Author</button>
             <button class="search-methods__diary">Dairy</button>
         </div>`;
-    fetch("/getAllBooks")
+    fetch("/getallbooks")
         .then(response => response.json())
-        .then(data => {loadBooks(data);setListView()});
+        .then(data => {
+            loadBooks(data);
+            setListView();
+        });
 
     document.querySelector('.search-bar-wrapper .search-bar').addEventListener('input',function(e){
         e.preventDefault();
@@ -45,7 +48,6 @@ window.onload = function (){
         document.getElementById("books").style.gridTemplateColumns = "repeat(1,100%)";
         document.querySelectorAll("div.books__item")
             .forEach(item=>item.style.gridTemplateColumns = "20% 80%");
-        console.log(document.querySelectorAll(".books__item"));
         document.querySelectorAll("#books p.item-date,#books p.item-desc")
             .forEach(item=>item.style.display="block");
         document.querySelectorAll("#books .item-caption")
