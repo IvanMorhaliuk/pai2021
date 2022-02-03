@@ -43,6 +43,6 @@
     <!-- /.container -->
 </section>
 
-<script src="/public/views/page-settings/scripts/settings.js"></script>
+<script type="module" src="/public/views/page-settings/scripts/settings.js"></script>
 </body>
 </html>

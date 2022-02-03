@@ -1,7 +1,6 @@
 <link rel="stylesheet" href="/public/views/shared/components/add-book/css/add-book.css">
 <div class="add-book-overlay">
     <div class="add-book">
-
         <div class="messages_tmp">
             <?php if(isset($messages)){
                 foreach ($messages as $message){
@@ -24,13 +23,6 @@
             <textarea class="add-book__desc" name="description" type="text" id="description" cols="10" rows="3"></textarea>
             <button type="submit">Submit</button>
         </form>
-
-        <div class="book">
-            <?php if(isset($book)){
-                echo json_encode($book);
-            }
-            ?>
-        </div>
     </div>
     <!-- /.add-book -->
 </div>

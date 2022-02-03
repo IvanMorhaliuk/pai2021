@@ -73,6 +73,6 @@
     </div>
 </section>
 
-<script src="/public/views/page-statistics/scripts/statistics.js"></script>
+<script type="module" src="/public/views/page-statistics/scripts/statistics.js"></script>
 </body>
 </html>

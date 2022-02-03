@@ -2,20 +2,45 @@
 
 class User
 {
+
     private string $email;
     private string $password;
     private string $name;
     private string $surname;
     private string $nickname;
-    private array $privateBooksList;
-    public function __construct(string $email,string $password,string $name = "",string $surname ="",string $nickname ="",$privateBooksList=[])
+    private string $birthday;
+    private $id;
+
+    public function __construct(string $email,string $password,string $name = "",string $surname ="",string $nickname =""
+        ,string $birthday = "", $id = null)
     {
         $this->email = $email;
         $this->password = $password;
         $this->name = $name;
         $this->surname = $surname;
         $this->nickname = $nickname;
-        $this->privateBooksList = $privateBooksList;
+        $this->birthday = $birthday;
+        $this->id = $id;
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
+    }
+
+    public function setId(?int $id): void
+    {
+        $this->id = $id;
+    }
+
+    public function getBirthday(): string
+    {
+        return $this->birthday;
+    }
+
+    public function setBirthday(string $birthday): void
+    {
+        $this->birthday = $birthday;
     }
 
     public function getEmail(): string
@@ -66,17 +91,6 @@ class User
     public function setNickname(string $nickname)
     {
         $this->nickname = $nickname;
-    }
-
-
-    public function getPrivateBooksList(): array
-    {
-        return $this->privateBooksList;
-    }
-
-    public function setPrivateBooksList(array $privateBooksList): void
-    {
-        $this->privateBooksList = $privateBooksList;
     }
 
 

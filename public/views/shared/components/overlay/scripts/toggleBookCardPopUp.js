@@ -34,14 +34,9 @@ export default class ToggleBookCardPopUp {
                     this.#overlay.querySelector(".book-entity__edit-panel").style.display = "flex";
                     this.#overlay.querySelector(".book-entity__content").setAttribute("contenteditable","true");
                 }.bind(this));
-                function closeBookEntity(elem) {
-                    elem.querySelector(".book-entity").style.display = "none";
-                    elem.querySelector(".book-entity__done").style.display = "none";
-                    elem.querySelector(".book-entity__edit-panel").style.display = "none";
-                    elem.querySelector(".book-entity__cover").style.top = "50%";
-                    elem.querySelector(".book-entity__content").setAttribute("contenteditable", "false");
-                }
+
                 this.#overlay.querySelector(".book-entity__close").addEventListener("click",function (){
+                    console.log("clic");
                     closeBookEntity(this.#overlay);
                 }.bind(this));
                 this.overlay.querySelector(".book-entity__done").addEventListener("click", function (){
@@ -59,6 +54,13 @@ export default class ToggleBookCardPopUp {
                     location.reload();
                     closeBookEntity(this.#overlay);
                 }.bind(this));
+                function closeBookEntity(elem) {
+                    elem.querySelector(".book-entity").style.display = "none";
+                    elem.querySelector(".book-entity__done").style.display = "none";
+                    elem.querySelector(".book-entity__edit-panel").style.display = "none";
+                    elem.querySelector(".book-entity__cover").style.top = "50%";
+                    elem.querySelector(".book-entity__content").setAttribute("contenteditable", "false");
+                }
             }
         }.bind(this));
         this.#overlay.querySelector(".pop-up__book-close").addEventListener("click",function (){

@@ -28,7 +28,6 @@ img[alt="book cover"]{
 }
 .item-desc,.item-date{
     display: none;
-
 }
 .books__header{
     width: 70%;

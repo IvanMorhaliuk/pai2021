@@ -19,23 +19,23 @@
 
 
             <div class="form register-page__form">
-                <form action="#" method="post">
+                <form action="/registeruser" method="post">
                     <fieldset class="form__inputs">
                         <legend>Create Profile</legend>
                         <div class="form__input-wrapper">
-                            <input type="text" name="login" id="name" placeholder="name">
+                            <input type="text" name="name" id="name" placeholder="name">
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="text" name="login" id="surname" placeholder="surname">
+                            <input type="text" name="surname" id="surname" placeholder="surname">
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="date" name="login" id="dateOfBirth" placeholder="date of birth">
+                            <input type="date" name="birthday" id="dateOfBirth" placeholder="date of birth">
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
-                            <input type="email" name="login" id="login" placeholder="email">
+                            <input type="email" name="email" id="login" placeholder="email">
                         </div>
                         <!-- /.form-input-wrapper -->
                         <div class="form__input-wrapper">
@@ -60,5 +60,6 @@
 
 
     <script src="/public/views/page-login-and-registration/scripts/bganim.js"></script>
+    <script src="/public/views/page-login-and-registration/scripts/validation.js"></script>
 </body>
 </html>

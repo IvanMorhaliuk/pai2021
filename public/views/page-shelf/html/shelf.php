@@ -28,7 +28,7 @@
         <h2>Private</h2>
         <div class="private-diaries diaries">
             <?php include __DIR__ . "/../../shared/components/bookshelf/html/bookshelf.php" ?>
-            <a href="#" class="more">More...</a>
+            <a href="/addbook" class="more">Add</a>
         </div>
         <!-- /.private-diaries -->
     </div>

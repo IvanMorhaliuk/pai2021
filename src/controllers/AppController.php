@@ -17,7 +17,13 @@ class AppController{
     {
         return $this->request === "GET";
     }
-
+    protected function validateUser(): ?bool
+    {
+        if (!$this->session->isAuth()){
+            return $this->render('page-login-and-registration', 'login');
+        }
+        return true;
+    }
     protected function render(string $page , string $template = null,array $variables = []){
         $templatePath = 'public/views/' . $page . '/html/' . $template . '.php';
         $output = 'File not found';

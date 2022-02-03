@@ -30,15 +30,15 @@
                 <div class="personal-info">
                     <div class="key">Name</div>
                     <!-- /.key -->
-                    <div class="value"></div>
+                    <div class="value user-name"></div>
                     <!-- /.value -->
                     <div class="key">Surname</div>
                     <!-- /.key -->
-                    <div class="value"></div>
+                    <div class="value user-surname"></div>
                     <!-- /.value -->
                     <div class="key">Date Of birth</div>
                     <!-- /.key -->
-                    <div class="value"></div>
+                    <div class="value user-birthday"></div>
                     <!-- /.value -->
                     <div class="key">City</div>
                     <!-- /.key -->
